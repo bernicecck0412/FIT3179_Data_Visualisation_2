@@ -1,0 +1,91 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Ranking of Malaysian States by GDP per Capita (2015-2022)"
+    },
+    "width": 1000,
+    "height": 600,
+    "data": {
+        "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/GDP_Per_Capita_Malaysia_States(2015-2022).csv",
+        "format": {"type": "csv"}
+    },
+    "transform": [
+        {
+            "sort": [{"field": "GDP", "order": "descending"}],
+            "window": [{"op": "rank", "as": "rank"}],
+            "groupby": ["Year"]
+        },
+        {
+            "lookup": "State",
+            "from": {
+                "data": {
+                    "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/Malaysia_States_Flags.csv"
+                },
+                "key": "State",
+                "fields": ["Icon"]
+            }
+        }
+    ],
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "ordinal",
+            "sort": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+            "title": "Year",
+            "axis": {
+                "grid": true,
+                "domain": false,
+                "ticks": false,
+                "offset": 20,
+                "labelAngle": 0
+            }
+        },
+        "y": {
+            "field": "Rank",
+            "type": "quantitative",
+            "sort": "descending",
+            "title": "Rank",
+            "scale": {"domainMin": 1},
+            "axis": {
+                "grid": false,
+                "domain": false,
+                "ticks": false,
+                "offset": -40
+            }
+        },
+        "tooltip": [
+            {"field": "State", "type": "nominal"},
+            {"field": "GDP", "type": "quantitative"},
+            {"field": "Rank", "type": "quantitative"}
+        ],
+        "color": {
+                    "field": "State",
+                    "type": "nominal",
+                    "title": "State",
+                    "legend": {"title": "State", "orient": "right"},
+                    "scale": {
+                        "domain": ["Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang", "Perak", "Perlis", "Pulau Pinang", "Sabah", "Sarawak", "Selangor", "Terengganu", "WP Kuala Lumpur", "WP Labuan"],
+                        "range": ["#123456",  "#0041C2", "#488AC7", "#B3446C", "#7E587E", "#FFE87C", "#C2B280", "#493D26", "#566D7E",  "#5C5858", "#8C8C8C", "#FDBD01", "#E78A61",  "#045F5F", "#D5D6EA"]
+                    }
+                }
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "line",
+                "size": 5,
+                "point": {
+                    "filled": true,
+                    "size": 80,
+                    "strokeWidth": 5
+                }
+            },
+            "encoding": {"color": {"field": "State"}, "opacity": {"value": 0.8}}
+        },
+        {
+            "mark": {"type": "image", "width": 40, "height": 20, "tooltip": true},
+            "transform": [{"filter": "datum.Year == 2015 || datum.Year == 2022"}],
+            "encoding": {"url": {"field": "Icon", "type": "nominal"}}
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "GDP per Capita by State in Malaysia (2015-2024)",
+    "width": 650,
+    "height": 400,
+    "data": {
+        "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/my.json",
+        "format": {"type": "topojson", "feature": "malaysia"}
+    },
+    "params": [
+        {
+            "name": "YearFilter",
+            "value": 2024,
+            "bind": {"input": "range", "min": 2015, "max": 2024, "step": 1, "name": "Year"}
+        }
+    ],
+    "transform": [
+        {
+            "lookup": "properties.name",
+            "from": {
+                "data": {
+                    "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/Malaysia_GDP_PER_CAPITAL.csv"
+                },
+                "key": "State",
+                "fields": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]
+            }
+        },
+        {
+            "fold": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+            "as": ["Year", "GDP"]
+        },
+        {
+            "filter": "datum.Year == YearFilter"
+        },
+        { "calculate": "datum.GDP", "as" : "GDP Per Capita (RM)" }
+    ],
+    "projection": {"type": "equalEarth"},
+    "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.4},
+    "encoding": {
+        "color": {
+            "field": "GDP Per Capita (RM)",
+            "type": "quantitative",
+            "legend": {"title": "GDP Per Capita (RM)", "orient": "right"},
+            "scale": {
+                "range": ["#feedde", "#fdd0a2", "#fdae6b", "#fd8d3c","#f16913", "#d94801", "#8c2d04"]
+
+            }
+        },
+        "tooltip": [
+            {"field": "properties.name", "title": "State"},
+            {"field": "GDP Per Capita (RM)", "title": "GDP Per Capita", "type": "quantitative", "format": ","},
+            {"field": "Year", "title": "Year", "type": "ordinal"}
+        ]
+    }
+}

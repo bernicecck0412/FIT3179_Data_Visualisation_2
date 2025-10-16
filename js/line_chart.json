@@ -1,0 +1,110 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 500,
+    "title": "GDP by State in Malaysia (2015-2024)",
+    "data": {
+      "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_W10_Homework/refs/heads/main/data/Malaysia%20GDP%20by%20state%2C%202015-2024%20-%20RM%20million.csv"
+      },
+    "params": [
+        {
+            "name": "StateSelection",
+            "bind": {
+                "input": "select",
+                "options": [null, "Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang", "Perak", "Perlis", "Penang", "Sabah", "Sarawak", "Selangor", "Terengganu", "Kuala Lumpur", "Labuan"],
+                "labels": ["Show All", "Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang", "Perak", "Perlis", "Penang", "Sabah", "Sarawak", "Selangor", "Terengganu", "Kuala Lumpur", "Labuan"],
+                "name": "Select State: "
+            }
+    }
+    ],
+    "transform": [
+    {
+      "fold": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+        "as": ["Year", "GDP"]
+    },
+    {
+      "calculate": "parseFloat(replace(datum.GDP, ',', ''))",
+      "as": "GDP_value"
+    }
+    ,
+    {
+      "filter": "StateSelection == null || datum.State == StateSelection"
+    }
+    ],
+    "layer": [
+        {
+            "mark": {"type": "line", "point": true, "tooltip": true},
+            "encoding": {
+                "x": {"field": "Year", "type": "ordinal", "title": "Year"},
+                "y": {
+                    "field": "GDP_value",
+                    "type": "quantitative",
+                    "title": "GDP (Malaysia Ringgit)",
+                    "axis": {"format": ".0f"},
+                    "scale": {"domain": [0, 450000] }
+                },
+                "color": {
+                    "field": "State",
+                    "type": "nominal",
+                    "title": "State",
+                    "legend": {"title": "State", "orient": "right"},
+                    "scale": {
+                        "domain": ["Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang", "Perak", "Perlis", "Pulau Pinang", "Sabah", "Sarawak", "Selangor", "Terengganu", "WP Kuala Lumpur", "WP Labuan"],
+                        "range": ["#123456",  "#0041C2", "#488AC7", "#B3446C", "#7E587E", "#FFE87C", "#C2B280", "#493D26", "#566D7E",  "#5C5858", "#8C8C8C", "#FDBD01", "#E78A61",  "#045F5F", "#D5D6EA"]
+                    }
+                },
+                "tooltip": [
+                    {"field": "State", "type": "nominal", "title": "State"},
+                    {"field": "Year", "type": "ordinal", "title": "Year"},
+                    {"field": "GDP_value", "type": "quantitative", "title": "GDP (Malaysia Ringgit)", "format": ".0f"}
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "rule",
+                "strokeDash": [6, 4],
+                "color": "black"
+            },
+            "encoding": {
+                "x": {"datum": "2024"}
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "text": "Highest GDP",                          
+                "fontSize": 12,
+                "color": "black",
+                "fontWeight": "bold"
+            },
+            "encoding": {
+                "x": {"datum": "2024"},
+                "y": {"datum": 455000}   
+            }
+        },
+        {
+            "mark": {
+                "type": "rule",
+                "strokeDash": [6, 4],
+                "color": "black"
+            },
+            "encoding": {
+                "x": {"datum": "2020"}
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "text": "COVID-19 starts",                          
+                "fontSize": 12,
+                "color": "black",
+                "fontWeight": "bold"
+            },
+            "encoding": {
+                "x": {"datum": "2020"},
+                "y": {"datum": 455000}   
+            }
+        }
+    ]
+}
