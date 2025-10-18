@@ -46,7 +46,7 @@
                     "lookup": "properties.NAME",
                     "from": {
                         "data": {
-                        "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/World_GDP_Per_Capita.csv"
+                        "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/data/World_GDP_Per_Capita.csv"
                         },
                         "key": "Country Name",
                         "fields": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]

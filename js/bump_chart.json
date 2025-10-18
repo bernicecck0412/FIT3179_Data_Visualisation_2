@@ -6,7 +6,7 @@
     "width": 1000,
     "height": 600,
     "data": {
-        "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/GDP_Per_Capita_Malaysia_States(2015-2022).csv",
+        "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/data/GDP_Per_Capita_Malaysia_States(2015-2022).csv",
         "format": {"type": "csv"}
     },
     "transform": [
@@ -19,7 +19,7 @@
             "lookup": "State",
             "from": {
                 "data": {
-                    "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/Malaysia_States_Flags.csv"
+                    "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/data/Malaysia_States_Flags.csv"
                 },
                 "key": "State",
                 "fields": ["Icon"]
