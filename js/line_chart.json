@@ -49,8 +49,8 @@
                     "title": "State",
                     "legend": {"title": "State", "orient": "right"},
                     "scale": {
-                        "domain": ["Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang", "Perak", "Perlis", "Pulau Pinang", "Sabah", "Sarawak", "Selangor", "Terengganu", "WP Kuala Lumpur", "WP Labuan"],
-                        "range": ["#123456",  "#0041C2", "#488AC7", "#B3446C", "#7E587E", "#FFE87C", "#C2B280", "#493D26", "#566D7E",  "#5C5858", "#8C8C8C", "#FDBD01", "#E78A61",  "#045F5F", "#D5D6EA"]
+                        "domain": ["Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang", "Perak", "Perlis", "Penang", "Sabah", "Sarawak", "Selangor", "Terengganu", "Kuala Lumpur", "Labuan"],
+                        "range": ["#FF8904",  "#FFD230", "#A65F1B", "#36BBA7", "#1C398E", "#21BCFF", "#AD46FF", "#FB64B6", "#FFA1AD",  "#90A1B9", "#79716B", "#615FFF", "#B8E6FE",  "#1A7595", "#7CCF35"]
                     }
                 },
                 "tooltip": [

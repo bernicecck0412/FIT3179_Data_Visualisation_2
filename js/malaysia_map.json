@@ -42,7 +42,7 @@
             "type": "quantitative",
             "legend": {"title": "GDP Per Capita (RM)", "orient": "right"},
             "scale": {
-                "range": ["#feedde", "#fdd0a2", "#fdae6b", "#fd8d3c","#f16913", "#d94801", "#8c2d04"]
+                "range": ["#fef0d9", "#fdd49e","#fdbb84", "#fc8d59", "#ef6548", "#d7301f" ,"#990000"]
 
             }
         },

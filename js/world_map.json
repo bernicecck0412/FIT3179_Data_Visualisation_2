@@ -31,14 +31,14 @@
                 "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
                 "format": {"type": "topojson", "feature": "oceans"}
             },
-            "mark": {"type": "geoshape", "fill": "skyblue"}
+            "mark": {"type": "geoshape", "fill": "#DFF2FE"}
         },
         {
             "data": {
                 "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/WorldMapWithGraticules.topojson",
                 "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
             },
-            "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+            "mark": {"type": "geoshape", "fill": null, "stroke": "#C0C0C0"}
         },
         {
             "transform": [
@@ -67,7 +67,7 @@
                     "scale": {
                         "type": "threshold",
                         "domain": [10000, 20000, 30000, 40000, 50000, 60000],
-                        "range": ["#fdae6b", "#fd8d3c","#f16913", "#d94801", "#8c2d04"]
+                        "range": ["#fef0d9", "#fdd49e","#fdbb84", "#fc8d59", "#ef6548", "#d7301f" ,"#990000"]
                     }
                 },
                 "tooltip": [
