@@ -1,0 +1,79 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 720,
+    "height": 400,
+    "data": {
+        "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/data/Economic_activity_Percentage_share_to_state's_GDP.csv",
+        "format": {"type": "csv"}
+    },
+    "params": [
+        {
+            "name": "StateFilter",
+            "value": "Johor",
+            "bind": {
+                "input": "select",
+                "options": ["Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang", "Pulau Pinang", "Perak", "Perlis", "Selangor", "Terengganu", "Sabah", "Sarawak", "Kuala Lumpur", "Labuan"],
+                "name": "Select State: "
+            }
+        },
+        {
+            "name": "YearFilter",
+            "value": 2024,
+            "bind": {
+                "input": "range",
+                "min": 2015, 
+                "max": 2024, 
+                "step": 1, 
+                "name": "Year "
+            }
+        }
+    ],
+    "layer": [
+        {
+            "transform": [
+                {"filter": "datum.State == StateFilter && datum.Year == YearFilter"},
+                {"fold": ["Agriculture", "Mining and Quarrying", "Manufacturing", "Construction", "Services", "Others"], "as": ["Sector", "Percentage"]}
+            ],
+            "mark": {"type": "arc", "innerRadius": 100, "tooltip": true},
+            "encoding": {
+                "theta": {
+                    "field": "Percentage",
+                    "type": "quantitative",
+                    "title": "Percentage Share"},
+                "color": {
+                    "field": "Sector",
+                    "type": "nominal",
+                    "title": "Economic Sector",
+                    "scale": {
+                        "domain": ["Agriculture", "Mining and Quarrying", "Manufacturing", "Construction", "Services", "Others"],
+                        "range": ["#FFF085", "#D1D5DC", "#70D897", "#FFA1AD", "#b3b3ff", "#FFB86A"]},
+                    "legend": {
+                        "orient": "top-left",
+                        "title": "Economic Sector"}
+                },
+                "tooltip": [
+                    {"field": "Sector", "type": "nominal", "title": "Sector"},
+                    {"field": "Percentage", "type": "quantitative", "title": "Share %", "format": ".2f"},
+                    {"field": "State", "type": "nominal", "title": "State"},
+                    {"field": "Year", "type": "ordinal", "title": "Year"}
+                ]
+            }
+        },
+        {
+            "transform": [
+                {"filter": "datum.State == StateFilter && datum.Year == YearFilter"}
+            ],
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "fill": "black"
+            },
+            "encoding": {
+                "text": {"field": "State", "type": "nominal"}
+            }
+        }
+    ]
+}

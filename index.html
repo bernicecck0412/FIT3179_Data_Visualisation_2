@@ -20,15 +20,17 @@
 
     <body>
         <div class="page">
+            <!-- Title of the Dashboard -->
             <div class="pure-g">
                 <div class="pure-u-1-1">
                     <div class="chart-card" id="header-card">
                         <h1>GDP Per Capita of Malaysia (2015-2024)</h1>
-                        <p>This dashboard visualise how Malaysia’s economic performance has evolved over the past decade. <br>GDP = Gross Domestic Product</p>
+                        <p><b>This dashboard visualise how Malaysia’s economic performance has evolved over the past decade. <br>GDP = Gross Domestic Product</b></p>
                     </div>
                 </div>
             </div>
 
+            <!-- World Map -->
             <div class="pure-g">
                 <div class="pure-u-1-1">
                     <div class="chart-card" id="world-map-card">
@@ -38,10 +40,11 @@
                 </div>
             </div>
 
+            <!-- Malaysia Map -->
             <div class="pure-g">
                 <div class="pure-u-1-1">
                     <div class="chart-card">
-                        <h2>GDP per Capita by State</h2>
+                        <h2>GDP per Capita of Malaysia by State</h2>
                         <div class="pure-g">
                             <!-- Chart Column -->
                             <div class="pure-u-3-4">
@@ -50,9 +53,9 @@
                             
                             <!-- Description Column -->
                             <div class="pure-u-1-4" id="description-right">
-                                <p><span style="color:#045F5F"><b>Kuala Lumpur</b></span> consistently recorded as highest GDP per capita. Other states such as Selangor and 
+                                <p><b>Kuala Lumpur</b> consistently recorded as highest GDP per capita. Other states such as Selangor and 
                                     Penang also have relatively high GDP per capita compared to states like Kelantan and Perlis, which remain lighter 
-                                    in color.<br><br>This indicates that economic activities are more concentrated in urban and industrialized areas.</p>
+                                    in color.<br><br>This indicates that economic activities are more <b>concentrated in urban and industrialized areas</b>.</p>
                                     
                             </div>    
                         </div>
@@ -60,10 +63,34 @@
                 </div>
             </div>
 
+            <!-- Bump Chart - Ranking -->
             <div class="pure-g">
                 <div class="pure-u-1-1">
                     <div class="chart-card">
-                        <h2>GDP by State</h2>
+                        <h2>Ranking of States by GDP Per Capita</h2>
+                        <div class="pure-g">
+                            <!-- Chart Column -->
+                            <div class="pure-u-3-4">
+                                <div id="bump_chart"></div>
+                            </div>
+                            
+                            <!-- Description Column -->
+                            <div class="pure-u-1-4" id="description-right">
+                                <p>The ranking trend shows strong economic concentration in Malaysia’s capital and key urban regions. <span style="color:#25A9E5">
+                                    <b>Kuala Lumpur</b></span> and <span style="color:#A65F1B"><b>Labuan</b></span> consistently dominate GDP per capita rankings, reflecting
+                                    their financial and industrial strengths. Limited rank mobility among most states suggests persistent regional economic disparities and
+                                    slower convergence across Malaysia’s state economies over time.</p>    
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Line Chart - GDP -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div class="chart-card">
+                        <h2>GDP of each State</h2>
                         <div class="pure-g">
                             <!-- Description Column -->
                             <div class="pure-u-1-4" id="description-left">
@@ -83,47 +110,95 @@
                 </div>
             </div>
 
+            <!-- Population Pyramid -->
             <div class="pure-g">
                 <div class="pure-u-1-1">
                     <div class="chart-card">
-                        <h2>Ranking of States by GDP Per Capita</h2>
-                        
-                        <div id="bump_chart"></div>
-                    </div>
-                </div>
-            </div> 
-
-
-            <div class="pure-g">
-                <div class="pure-u-1-1">
-                    <div class="chart-card">
-                        <h2>Economic Relationships</h2>
-                        <div id="scatter_plot"></div>
+                        <h2>Population of each State</h2>
+                        <div class="pure-g">
+                            <!-- Chart Column -->
+                            <div class="pure-u-3-4">
+                                <div id="population_pyramid"></div>
+                            </div>
+                            
+                            <!-- Description Column -->
+                            <div class="pure-u-1-4" id="description-right">
+                                <p><b>Selangor</b> has the largest population, showing its role as Malaysia’s main economic and urban center. 
+                                    Most states have a <b>balanced gender distribution</b>, suggesting consistent demographic trends nationwide, while smaller states like 
+                                    <b>Labuan</b> and <b>Perlis</b> have much smaller populations, 
+                                    reflecting their limited size and economic activities. </p>    
+                            </div>    
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- <div class="chart-container">
-                <div id="test"></div>
-            </div> -->
+            <!-- Area Chart -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div class="chart-card">
+                        <h2>GDP by Economic Activities</h2>
+                        <div class="pure-g">
+                            <!-- Chart Column -->
+                            <div class="pure-u-1-4" id="description-left">
+                                <p>Malaysia's GDP shows strong <span style="color:#70D897"><b>Manufacturing</b></span> dominance with steady growth across sectors. The COVID-19 pandemic in 2020 caused a temporary drop, 
+                                    but rapid recovery followed from June 2020 onward. <span style="color:#FFA1AD"><b>Construction</b></span> and <span style="color:#9F9FA9"><b>Mining</b></span> sectors demonstrate more volatility compared to stable manufacturing 
+                                    and <span style="color:#FDC745"><b>Agriculture</b></span> contributions.</p>
+                            </div>
+                            
+                            <!-- Description Column -->
+                            <div class="pure-u-3-4">
+                                <div id="area_chart"></div> 
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Doughnut Chart -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div class="chart-card">
+                        <h2>Economic Activities by State</h2>
+                        <div class="pure-g">
+                            <!-- Chart Column -->
+                            <div class="pure-u-3-4">
+                                <div id="doughnut_chart"></div> 
+                            </div>
+                            
+                            <!-- Description Column -->
+                            <div class="pure-u-1-4" id="description-right">
+                                <p>Most Malaysian states are service-based economies, with <span style="color:#b3b3ff"><b>Services</b></span> contributing over 50% to GDP in 13 out of 15 states/federal territories in 2024. 
+                                    Over <b>80%</b> of Kuala Lumpur's economy comes from Services, while resource-rich Sabah and Sarawak show stronger <span style="color:#9F9FA9"><b>Mining</b></span> contributions. 
+                                    <span style="color:#70D897"><b>Manufacturing</b></span> dominates in industrial hubs like Penang and Negeri Sembilan.
+                                </p>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metadata -->
             <div class="pure-g">
                 <div class="pure-u-1-1">
                     <div class="chart-card" id="metadata-card">
                         <p>Author: Bernice Chua Chi Kheng</pp>
                         <p>Date: 21/10/2025</p>
                         <p>Data Source: </p>
+                        <p>World Bank. <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?view=map">https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?view=map</a></p>
+                        <p>Work Bank. <a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?locations=MY">https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?locations=MY</a></p>
+                        <p>satistic.gov.my. <a href="http://www.statistics.gov.my/site/downloadrelease?id=gross-domestic-product-gdp-by-state-2024"> http://www.statistics.gov.my/site/downloadrelease?id=gross-domestic-product-gdp-by-state-2024</a></p>
+                        <p>data.gov.my. <a href="https://archive.data.gov.my/data/ms_MY/dataset/gross-domestic-product-gdp-per-capita-by-state-at-current-prices">https://archive.data.gov.my/data/ms_MY/dataset/gross-domestic-product-gdp-per-capita-by-state-at-current-prices</a></p>
+                        <p>GitHub. <a href="https://github.com/jwarby/malaysia-state-flag-icon-css">https://github.com/jwarby/malaysia-state-flag-icon-css</a></p>
+                        <p>OpenDOSM. <a href="https://open.dosm.gov.my/data-catalogue/population_state">https://open.dosm.gov.my/data-catalogue/population_state</a></p>
+                        <p>Official Portal of Ministry of Economy. <a href="https://ekonomi.gov.my/en/socio-economic-statistics/socio-economic/national-accounts">https://ekonomi.gov.my/en/socio-economic-statistics/socio-economic/national-accounts</a></p>
+
+                       
                     </div>
                 </div>
             </div>
-    
-
 
         </div>
-
-        
-        
-
 
         <script type="text/javascript">
             var spec1 = "js/world_map.json";
@@ -131,7 +206,9 @@
             var spec3 = "js/malaysia_map.json";
             var spec4 = "js/bump_chart.json";
             var spec5 = "js/scatter_plot.json";
-            var spec6 = "js/test.json";
+            var spec6 = "js/population_pyramid.json";
+            var spec7 = "js/doughnut_chart.json";
+            var spec8 = "js/area_chart.json";
 
 
             vegaEmbed('#world_choropleth_map', spec1).then(function(result) {
@@ -154,7 +231,15 @@
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
 
-            vegaEmbed('#test', spec6).then(function(result) {
+            vegaEmbed('#population_pyramid', spec6).then(function(result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+
+            vegaEmbed('#doughnut_chart', spec7).then(function(result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+
+            vegaEmbed('#area_chart', spec8).then(function(result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
         </script>

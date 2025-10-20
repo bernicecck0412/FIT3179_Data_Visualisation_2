@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 625,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/data/Malaysia_Population.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+        "name": "YearFilter",
+        "value": 2024,
+        "bind": {
+            "input": "range",
+            "min": 2015, 
+            "max": 2024, 
+            "step": 1, 
+            "name": "Year "
+        }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "parseInt(split(datum.date, '/')[2])",
+      "as": "year"
+    },
+    {
+      "filter": "datum.year == YearFilter"
+    },
+    {
+      "calculate": "datum.sex == 'male' ? datum.population : -datum.population",
+      "as": "population_signed"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "bar", "cornerRadius": 2},
+      "encoding": {
+        "x": {
+          "field": "population_signed",
+          "type": "quantitative",
+          "title": "Population",
+          "axis": {
+            "format": ",.0f",
+            "labelExpr": "replace(datum.label, '-', '')"
+          }
+        },
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "title": "State",
+          "sort": [
+            "Labuan", "Perlis", "Melaka", "Negeri Sembilan", "Terengganu", "Pahang",  
+            "Pulau Pinang", "Kelantan", "Kuala Lumpur", "Kedah", 
+            "Sarawak", "Perak", "Sabah", "Johor", "Selangor"
+          ],
+          "axis": {"offset": 5}
+        },
+        "color": {
+          "field": "sex",
+          "type": "nominal",
+          "scale": {
+            "domain": ["male", "female"],
+            "range": ["sandybrown", "skyblue"]
+          },
+          "legend": {
+            "title": "Gender",
+            "orient": "top-right"
+          }
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "sex", "type": "nominal", "title": "Gender"},
+          {"field": "population", "type": "quantitative", "title": "Population", "format": ","},
+          {"field": "year", "type": "ordinal", "title": "Year"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {"datum": 0}
+      }
+    }
+  ]
+}

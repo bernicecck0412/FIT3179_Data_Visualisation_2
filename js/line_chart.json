@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 650,
+    "width": 640,
     "height": 400,
     "data": {
       "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_W10_Homework/refs/heads/main/data/Malaysia%20GDP%20by%20state%2C%202015-2024%20-%20RM%20million.csv"

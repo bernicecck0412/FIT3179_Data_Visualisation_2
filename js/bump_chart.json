@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1000,
+    "width": 700,
     "height": 400,
     "data": {
         "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/data/Ranking_GDP_Per_Capita_Malaysia_States.csv",
@@ -44,10 +44,10 @@
             "title": "Rank",
             "scale": {"domainMin": 1},
             "axis": {
-                "grid": false,
+                "grid": true,
                 "domain": false,
                 "ticks": false,
-                "offset": -40
+                "offset": -10
             }
         },
         "tooltip": [
@@ -62,7 +62,7 @@
                     "legend": null,
                     "scale": {
                         "domain": ["Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang", "Perak", "Perlis", "Pulau Pinang", "Sabah", "Sarawak", "Selangor", "Terengganu", "Kuala Lumpur", "Labuan"],
-                        "range": ["lightgrey",  "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "#FFA1AD",  "lightgrey", "lightgrey", "lightgrey", "lightgrey",  "#1A7595", "#7CCF35"]
+                        "range": ["lightgrey",  "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "#FFA1AD",  "lightgrey", "lightgrey", "lightgrey", "lightgrey",  "#25A9E5", "#A65F1B"]
                     }
                 }
     },
