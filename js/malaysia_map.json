@@ -1,7 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "GDP per Capita by State in Malaysia (2015-2024)",
-    "width": 650,
+    "width": 600,
     "height": 400,
     "data": {
         "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/my.json",
@@ -14,42 +13,149 @@
             "bind": {"input": "range", "min": 2015, "max": 2024, "step": 1, "name": "Year"}
         }
     ],
-    "transform": [
+    "projection": {
+        "type": "mercator",
+        "scale": 1700,
+        "center": [109.5, 4.5],
+        "translate": [300, 200]
+    },
+    "layer": [
         {
-            "lookup": "properties.name",
-            "from": {
-                "data": {
-                    "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/data/Malaysia_GDP_PER_CAPITAL.csv"
+            "data": {
+                "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+                "format": {"type": "topojson", "feature": "oceans"}
+            },
+            "mark": {"type": "geoshape", "fill": "#DFF2FE"}
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/js/ne_110m_graticules_1.json",
+                "format": {"type": "topojson", "feature": "ne_110m_graticules_1"}
+            },
+            "mark": {"type": "geoshape", "fill": null, "stroke": "#C0C0C0"}
+        },
+        {
+            "transform": [
+                {
+                    "lookup": "properties.name",
+                    "from": {
+                        "data": {
+                            "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_Data_Visualisation_2/refs/heads/main/data/Malaysia_GDP_PER_CAPITAL.csv"
+                        },
+                        "key": "State",
+                        "fields": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]
+                    }
                 },
-                "key": "State",
-                "fields": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]
-            }
-        },
-        {
-            "fold": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
-            "as": ["Year", "GDP"]
-        },
-        {
-            "filter": "datum.Year == YearFilter"
-        },
-        { "calculate": "datum.GDP", "as" : "GDP Per Capita (RM)" }
-    ],
-    "projection": {"type": "equalEarth"},
-    "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.4},
-    "encoding": {
-        "color": {
-            "field": "GDP Per Capita (RM)",
-            "type": "quantitative",
-            "legend": {"title": "GDP Per Capita (RM)", "orient": "right"},
-            "scale": {
-                "range": ["#fef0d9", "#fdd49e","#fdbb84", "#fc8d59", "#ef6548", "#d7301f" ,"#990000"]
+                {
+                    "fold": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+                    "as": ["Year", "GDP"]
+                },
+                {
+                    "filter": "datum.Year == YearFilter"
+                },
+                { "calculate": "datum.GDP", "as" : "GDP Per Capita (RM)" }
+            ],
+            "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.4},
+            "encoding": {
+                "color": {
+                    "field": "GDP Per Capita (RM)",
+                    "type": "quantitative",
+                    "legend": {"title": "GDP Per Capita (RM)", "orient": "right"},
+                    "scale": {
+                        "range": ["#fef0d9", "#fdd49e","#fdbb84", "#fc8d59", "#ef6548", "#d7301f" ,"#990000"]
 
+                    }
+                },
+                "tooltip": [
+                    {"field": "properties.name", "title": "State"},
+                    {"field": "GDP Per Capita (RM)", "title": "GDP Per Capita", "type": "quantitative", "format": ","},
+                    {"field": "Year", "title": "Year", "type": "ordinal"}
+                ]
             }
         },
-        "tooltip": [
-            {"field": "properties.name", "title": "State"},
-            {"field": "GDP Per Capita (RM)", "title": "GDP Per Capita", "type": "quantitative", "format": ","},
-            {"field": "Year", "title": "Year", "type": "ordinal"}
-        ]
-    }
+        {
+            "data": {
+                "values": [
+                    {
+                        "start_lon": 101.6841, "start_lat": 3.1319,
+                        "end_lon": 105, "end_lat": 3.2,    
+                        "label_lon": 105, "label_lat": 3.2,  
+                        "label": "Kuala Lumpur Highest GDP"
+                    }
+                ]
+            },
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "stroke": "#286BA7",
+                        "strokeWidth": 1
+                    },
+                    "encoding": {
+                        "longitude": {"field": "start_lon", "type": "quantitative"},
+                        "longitude2": {"field": "end_lon"},
+                        "latitude": {"field": "start_lat", "type": "quantitative"},
+                        "latitude2": {"field": "end_lat"}
+                    }
+                },
+                {
+                    "mark": {
+                        "type": "text",
+                        "align": "left",
+                        "dx": 5,
+                        "fontSize": 12,
+                        "fontWeight": "bold",
+                        "fill": "#286BA7"
+                    },
+                    "encoding": {
+                        "longitude": {"field": "label_lon", "type": "quantitative"},
+                        "latitude": {"field": "label_lat", "type": "quantitative"},
+                        "text": {"field": "label", "type": "nominal"}
+                    }
+                }
+            ]
+        },
+        {
+            "data": {
+                "values": [
+                    {
+                        "start_lon": 101.8892, "start_lat": 5.1151,
+                        "end_lon": 105, "end_lat": 5.2,    
+                        "label_lon": 105, "label_lat": 5.2,  
+                        "label": "Kelantan Lowest GDP"
+                    }
+                ]
+            },
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "stroke": "#FE9A37",
+                        "strokeWidth": 1
+                    },
+                    "encoding": {
+                        "longitude": {"field": "start_lon", "type": "quantitative"},
+                        "longitude2": {"field": "end_lon"},
+                        "latitude": {"field": "start_lat", "type": "quantitative"},
+                        "latitude2": {"field": "end_lat"}
+                    }
+                },
+                {
+                    "mark": {
+                        "type": "text",
+                        "align": "left",
+                        "dx": 5,
+                        "fontSize": 12,
+                        "fontWeight": "bold",
+                        "fill": "#FE9A37"
+                    },
+                    "encoding": {
+                        "longitude": {"field": "label_lon", "type": "quantitative"},
+                        "latitude": {"field": "label_lat", "type": "quantitative"},
+                        "text": {"field": "label", "type": "nominal"}
+                    }
+                }
+            ]
+        }
+    ]
 }

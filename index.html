@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Economic Growth: GDP Per Capita of Malaysia (2015-2024)</title>
+        <title>GDP Per Capita of Malaysia (2015-2024)</title>
         <!-- Include Vega, Vega-Lite, and Vega-Embed libraries -->
         <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -22,72 +22,97 @@
         <div class="page">
             <div class="pure-g">
                 <div class="pure-u-1-1">
-                    <h1>Economic Growth: GDP Per Capita of Malaysia (2015-2024)</h1>
-                    <p>This dashboard visualise how Malaysia’s economic performance has evolved over the past decade, highlighting
-                        both its global context and internal disparities. It combines global and regional visual perspectives to 
-                        reveal growth patterns, state rankings, and relative progress across Malaysia’s 14 states and 3 federal 
-                        territories.</p>
+                    <div class="chart-card" id="header-card">
+                        <h1>GDP Per Capita of Malaysia (2015-2024)</h1>
+                        <p>This dashboard visualise how Malaysia’s economic performance has evolved over the past decade. <br>GDP = Gross Domestic Product</p>
+                    </div>
                 </div>
             </div>
 
             <div class="pure-g">
-                <div class="pure-u-2-3">
-                    <div class="chart-container">
+                <div class="pure-u-1-1">
+                    <div class="chart-card" id="world-map-card">
+                        <h2>GDP Per Capita of World Countries</h2>
                         <div id="world_choropleth_map"></div>
                     </div>
                 </div>
             </div>
 
             <div class="pure-g">
-                <div class="pure-u-1-3">
-                    <div class="description">
-                        <h2>GDP per Capita by State in Malaysia</h2>
-                        <p>The map shows the GDP per capita by state in Malaysia from 2015 to 2024. In 2024, federal territories such as 
-                            Kuala Lumpur recorded the highest GDP per capita, shown by the darker shade, followed by Labuan and Sarawak. 
-                            States in Peninsular Malaysia such as Selangor and Penang also have relatively high GDP per capita compared to 
-                            states like Kelantan and Perlis, which remain lighter in color. This indicates that economic activities are more 
-                            concentrated in urban and industrialized areas. Overall, Malaysia shows regional disparities in GDP per capita 
-                            distribution.</p>
-                    </div>
-                </div>
-                <div class="pure-u-2-3">
-                    <div class="chart-container">
-                        <div id="malaysia_choropleth_map"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pure-g">
-                <div class="pure-u-1-3">
-                    <div class="description">
-                        <h2>Malaysia’s GDP by State</h2>
-                        <p><span style="color:#FDBD01"><b>Selangor</b></span> has consistently recorded the highest GDP among all states 
-                            in Malaysia from 2015 to 2024. There was a noticeable drop in 2020, due to the start of the COVID-19 pandemic, 
-                            which affected most states' economic performance. However, the GDP gradually recovered in the following years. 
-                            By 2024, Selangor's GDP reached its highest point in the ten-year period, showing strong post-pandemic growth.
-                            Other states/federal territories such as <span style="color:#045F5F"><b>Kuala Lumpur</b></span> and 
-                            <span style="color:#123456"><b>Johor</b></span> also demonstrated steady increases over time, though at a 
-                            smaller scale compared to Selangor. By 2024, overall GDP of Malaysia reached its highest level within the ten-year
-                            period.</p>
-                    </div>
-                </div>
-                <div class="pure-u-2-3">
-                    <div class="chart-container">
-                        <div id="line_chart"></div>
+                <div class="pure-u-1-1">
+                    <div class="chart-card">
+                        <h2>GDP per Capita by State</h2>
+                        <div class="pure-g">
+                            <!-- Chart Column -->
+                            <div class="pure-u-3-4">
+                                <div id="malaysia_choropleth_map"></div>
+                            </div>
+                            
+                            <!-- Description Column -->
+                            <div class="pure-u-1-4" id="description-right">
+                                <p><span style="color:#045F5F"><b>Kuala Lumpur</b></span> consistently recorded as highest GDP per capita. Other states such as Selangor and 
+                                    Penang also have relatively high GDP per capita compared to states like Kelantan and Perlis, which remain lighter 
+                                    in color.<br><br>This indicates that economic activities are more concentrated in urban and industrialized areas.</p>
+                                    
+                            </div>    
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="pure-g">
                 <div class="pure-u-1-1">
-                    <div class="description">
-                        <h2>Ranking of Malaysian States by GDP per Capita</h2>
-                        <!-- <p>text</p> -->
+                    <div class="chart-card">
+                        <h2>GDP by State</h2>
+                        <div class="pure-g">
+                            <!-- Description Column -->
+                            <div class="pure-u-1-4" id="description-left">
+                                <p><span style="color:#FF692A"><b>Selangor</b></span> has consistently recorded the highest GDP among all states. There was a noticeable drop
+                                    in 2020, due to the COVID-19 pandemic, which affected most states' economic performance. However, the GDP gradually recovered in the following years. 
+                                    <span style="color:#25A9E5"><b>Kuala Lumpur</b></span> also demonstrated 
+                                    steady increases over time. <br><br>By 2024, overall GDP of Malaysia reached its highest level within the ten-year period.</p>
+                            </div>  
+
+                            <!-- Chart Column -->
+                            <div class="pure-u-3-4">
+                                <div id="line_chart"></div>
+                            </div>
+                             
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="pure-g">
                 <div class="pure-u-1-1">
-                    <div class="chart-container">
+                    <div class="chart-card">
+                        <h2>Ranking of States by GDP Per Capita</h2>
+                        
                         <div id="bump_chart"></div>
+                    </div>
+                </div>
+            </div> 
+
+
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div class="chart-card">
+                        <h2>Economic Relationships</h2>
+                        <div id="scatter_plot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="chart-container">
+                <div id="test"></div>
+            </div> -->
+
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div class="chart-card" id="metadata-card">
+                        <p>Author: Bernice Chua Chi Kheng</pp>
+                        <p>Date: 21/10/2025</p>
+                        <p>Data Source: </p>
                     </div>
                 </div>
             </div>
@@ -99,18 +124,14 @@
         
         
 
-        
-
-        <div class="chart-container">
-            <div id="test"></div>
-        </div>
 
         <script type="text/javascript">
             var spec1 = "js/world_map.json";
             var spec2 = "js/line_chart.json";
             var spec3 = "js/malaysia_map.json";
             var spec4 = "js/bump_chart.json";
-            // var spec5 = "js/test.json";
+            var spec5 = "js/scatter_plot.json";
+            var spec6 = "js/test.json";
 
 
             vegaEmbed('#world_choropleth_map', spec1).then(function(result) {
@@ -129,9 +150,13 @@
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
 
-            // vegaEmbed('#test', spec5).then(function(result) {
-            //     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            // }).catch(console.error);
+            vegaEmbed('#scatter_plot', spec5).then(function(result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+
+            vegaEmbed('#test', spec6).then(function(result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
         </script>
     </body>
 </html> 

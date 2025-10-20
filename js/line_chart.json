@@ -1,8 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 500,
-    "title": "GDP by State in Malaysia (2015-2024)",
+    "width": 650,
+    "height": 400,
     "data": {
       "url": "https://raw.githubusercontent.com/bernicecck0412/FIT3179_W10_Homework/refs/heads/main/data/Malaysia%20GDP%20by%20state%2C%202015-2024%20-%20RM%20million.csv"
       },
@@ -47,18 +46,48 @@
                     "field": "State",
                     "type": "nominal",
                     "title": "State",
-                    "legend": {"title": "State", "orient": "right"},
+                    "legend": null,
                     "scale": {
                         "domain": ["Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang", "Perak", "Perlis", "Penang", "Sabah", "Sarawak", "Selangor", "Terengganu", "Kuala Lumpur", "Labuan"],
-                        "range": ["#FF8904",  "#FFD230", "#A65F1B", "#36BBA7", "#1C398E", "#21BCFF", "#AD46FF", "#FB64B6", "#FFA1AD",  "#90A1B9", "#79716B", "#615FFF", "#B8E6FE",  "#1A7595", "#7CCF35"]
+                        "range": ["lightgrey",  "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey",  "lightgrey", "lightgrey", "#FF692A", "lightgrey",  "#25A9E5", "lightgrey"]
                     }
                 },
                 "tooltip": [
                     {"field": "State", "type": "nominal", "title": "State"},
                     {"field": "Year", "type": "ordinal", "title": "Year"},
-                    {"field": "GDP_value", "type": "quantitative", "title": "GDP (Malaysia Ringgit)", "format": ".0f"}
+                    {"field": "GDP_value", "type": "quantitative", "title": "GDP (Malaysia Ringgit)", "format": ",.0f"}
                 ]
             }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "dx": 5, 
+                "fontSize": 11,
+                "fontWeight": "bold"
+            },
+            "encoding": {
+                "x": {"datum": "2024"},
+                "y": {
+                    "field": "GDP_value",
+                    "type": "quantitative"
+                },
+                "text": {"field": "State"},
+                "color": {
+                    "field": "State",
+                    "type": "nominal",
+                    "scale": {
+                        "domain": ["Selangor", "Kuala Lumpur"],
+                        "range": ["#FF692A", "#25A9E5"]
+                    }
+                }
+            },
+            "transform": [
+                {
+                    "filter": "datum.Year == '2024' && (datum.State == 'Selangor' || datum.State == 'Kuala Lumpur')"
+                }
+            ]  
         },
         {
             "mark": {
@@ -75,12 +104,11 @@
                 "type": "text",
                 "text": "Highest GDP",                          
                 "fontSize": 12,
-                "color": "black",
-                "fontWeight": "bold"
+                "color": "black"
             },
             "encoding": {
                 "x": {"datum": "2024"},
-                "y": {"datum": 455000}   
+                "y": {"datum": 455000}  
             }
         },
         {
@@ -96,10 +124,9 @@
         {
             "mark": {
                 "type": "text",
-                "text": "COVID-19 starts",                          
+                "text": "COVID-19",                          
                 "fontSize": 12,
-                "color": "black",
-                "fontWeight": "bold"
+                "color": "black"
             },
             "encoding": {
                 "x": {"datum": "2020"},
