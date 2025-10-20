@@ -53,7 +53,7 @@
                 },
                 "tooltip": [
                     {"field": "Sector", "type": "nominal", "title": "Sector"},
-                    {"field": "Percentage", "type": "quantitative", "title": "Share %", "format": ".2f"},
+                    {"field": "Percentage", "type": "quantitative", "title": "Percentage %", "format": ".2f"},
                     {"field": "State", "type": "nominal", "title": "State"},
                     {"field": "Year", "type": "ordinal", "title": "Year"}
                 ]

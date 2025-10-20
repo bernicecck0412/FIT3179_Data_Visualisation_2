@@ -64,7 +64,7 @@
                 "type": "text",
                 "align": "left",
                 "dx": 5, 
-                "fontSize": 11,
+                "fontSize": 12,
                 "fontWeight": "bold"
             },
             "encoding": {
@@ -92,7 +92,7 @@
         {
             "mark": {
                 "type": "rule",
-                "strokeDash": [6, 4],
+                "strokeDash": [5, 5],
                 "color": "black"
             },
             "encoding": {
@@ -102,9 +102,10 @@
         {
             "mark": {
                 "type": "text",
-                "text": "Highest GDP",                          
-                "fontSize": 12,
-                "color": "black"
+                "text": "Highest GDP",
+                "fontSize": 14,
+                "color": "black",
+                "dy": -5
             },
             "encoding": {
                 "x": {"datum": "2024"},
@@ -114,7 +115,7 @@
         {
             "mark": {
                 "type": "rule",
-                "strokeDash": [6, 4],
+                "strokeDash": [5, 5],
                 "color": "black"
             },
             "encoding": {
@@ -125,8 +126,9 @@
             "mark": {
                 "type": "text",
                 "text": "COVID-19",                          
-                "fontSize": 12,
-                "color": "black"
+                "fontSize": 14,
+                "color": "black",
+                "dy": -5
             },
             "encoding": {
                 "x": {"datum": "2020"},

@@ -31,9 +31,6 @@
             "title": "Year",
             "axis": {
                 "grid": true,
-                "domain": false,
-                "ticks": false,
-                "offset": 20,
                 "labelAngle": 0
             }
         },
@@ -42,17 +39,11 @@
             "type": "quantitative",
             "sort": "descending",
             "title": "Rank",
-            "scale": {"domainMin": 1},
-            "axis": {
-                "grid": true,
-                "domain": false,
-                "ticks": false,
-                "offset": -10
-            }
+            "scale": {"domainMin": 1}
         },
         "tooltip": [
             {"field": "State", "type": "nominal"},
-            {"field": "GDP", "type": "quantitative", "format": ",.0f"},
+            {"field": "GDP", "title": "GDP Per Capita (RM)", "type": "quantitative", "format": ",.0f"},
             {"field": "Rank", "type": "quantitative"}
         ],
         "color": {
@@ -74,7 +65,7 @@
                 "point": {
                     "filled": true,
                     "size": 80,
-                    "strokeWidth": 5
+                    "strokeWidth": 4
                 }
             },
             "encoding": {"color": {"field": "State"}, "opacity": {"value": 0.8}}

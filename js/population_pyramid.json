@@ -29,7 +29,7 @@
     },
     {
       "calculate": "datum.sex == 'male' ? datum.population : -datum.population",
-      "as": "population_signed"
+      "as": "population_negative"
     }
   ],
   "layer": [
@@ -37,7 +37,7 @@
       "mark": {"type": "bar", "cornerRadius": 2},
       "encoding": {
         "x": {
-          "field": "population_signed",
+          "field": "population_negative",
           "type": "quantitative",
           "title": "Population",
           "axis": {
@@ -49,12 +49,8 @@
           "field": "state",
           "type": "nominal",
           "title": "State",
-          "sort": [
-            "Labuan", "Perlis", "Melaka", "Negeri Sembilan", "Terengganu", "Pahang",  
-            "Pulau Pinang", "Kelantan", "Kuala Lumpur", "Kedah", 
-            "Sarawak", "Perak", "Sabah", "Johor", "Selangor"
-          ],
-          "axis": {"offset": 5}
+          "sort": ["Labuan", "Perlis", "Melaka", "Negeri Sembilan", "Terengganu", "Pahang",  "Pulau Pinang", "Kelantan", "Kuala Lumpur", "Kedah", 
+            "Sarawak", "Perak", "Sabah", "Johor", "Selangor"]
         },
         "color": {
           "field": "sex",
