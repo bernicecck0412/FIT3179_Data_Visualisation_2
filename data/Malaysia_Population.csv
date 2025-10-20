@@ -1,0 +1,301 @@
+﻿state,date,sex,population
+Johor,1/1/2015,female,1700500
+Johor,1/1/2015,male,1909800
+Johor,1/1/2016,female,1720700
+Johor,1/1/2016,male,1931100
+Johor,1/1/2017,female,1744500
+Johor,1/1/2017,male,1952600
+Johor,1/1/2018,female,1773000
+Johor,1/1/2018,male,1976400
+Johor,1/1/2019,female,1786600
+Johor,1/1/2019,male,1974600
+Johor,1/1/2020,female,1868400
+Johor,1/1/2020,male,2141300
+Johor,1/1/2021,female,1881100
+Johor,1/1/2021,male,2138800
+Johor,1/1/2022,female,1890000
+Johor,1/1/2022,male,2138200
+Johor,1/1/2023,female,1914800
+Johor,1/1/2023,male,2192400
+Johor,1/1/2024,female,1938700
+Johor,1/1/2024,male,2245600
+Kedah,1/1/2015,female,1033400
+Kedah,1/1/2015,male,1063100
+Kedah,1/1/2016,female,1044100
+Kedah,1/1/2016,male,1075600
+Kedah,1/1/2017,female,1055200
+Kedah,1/1/2017,male,1088700
+Kedah,1/1/2018,female,1065100
+Kedah,1/1/2018,male,1097800
+Kedah,1/1/2019,female,1072300
+Kedah,1/1/2019,male,1101500
+Kedah,1/1/2020,female,1044100
+Kedah,1/1/2020,male,1087300
+Kedah,1/1/2021,female,1055900
+Kedah,1/1/2021,male,1095800
+Kedah,1/1/2022,female,1061900
+Kedah,1/1/2022,male,1101200
+Kedah,1/1/2023,female,1073200
+Kedah,1/1/2023,male,1116100
+Kedah,1/1/2024,female,1084500
+Kedah,1/1/2024,male,1132600
+Kelantan,1/1/2015,female,873000
+Kelantan,1/1/2015,male,887600
+Kelantan,1/1/2016,female,890100
+Kelantan,1/1/2016,male,906700
+Kelantan,1/1/2017,female,905800
+Kelantan,1/1/2017,male,923200
+Kelantan,1/1/2018,female,920600
+Kelantan,1/1/2018,male,939900
+Kelantan,1/1/2019,female,931700
+Kelantan,1/1/2019,male,952100
+Kelantan,1/1/2020,female,892400
+Kelantan,1/1/2020,male,900100
+Kelantan,1/1/2021,female,902600
+Kelantan,1/1/2021,male,909700
+Kelantan,1/1/2022,female,912000
+Kelantan,1/1/2022,male,918500
+Kelantan,1/1/2023,female,925800
+Kelantan,1/1/2023,male,934000
+Kelantan,1/1/2024,female,939000
+Kelantan,1/1/2024,male,949000
+Melaka,1/1/2015,female,441100
+Melaka,1/1/2015,male,447900
+Melaka,1/1/2016,female,447700
+Melaka,1/1/2016,male,453400
+Melaka,1/1/2017,female,453900
+Melaka,1/1/2017,male,459200
+Melaka,1/1/2018,female,458900
+Melaka,1/1/2018,male,463600
+Melaka,1/1/2019,female,462500
+Melaka,1/1/2019,male,465900
+Melaka,1/1/2020,female,473500
+Melaka,1/1/2020,male,524900
+Melaka,1/1/2021,female,477100
+Melaka,1/1/2021,male,527400
+Melaka,1/1/2022,female,479800
+Melaka,1/1/2022,male,528800
+Melaka,1/1/2023,female,486400
+Melaka,1/1/2023,male,541900
+Melaka,1/1/2024,female,492600
+Melaka,1/1/2024,male,554100
+Negeri Sembilan,1/1/2015,female,525100
+Negeri Sembilan,1/1/2015,male,563700
+Negeri Sembilan,1/1/2016,female,530200
+Negeri Sembilan,1/1/2016,male,569100
+Negeri Sembilan,1/1/2017,female,537100
+Negeri Sembilan,1/1/2017,male,576800
+Negeri Sembilan,1/1/2018,female,542100
+Negeri Sembilan,1/1/2018,male,580800
+Negeri Sembilan,1/1/2019,female,545600
+Negeri Sembilan,1/1/2019,male,580600
+Negeri Sembilan,1/1/2020,female,576000
+Negeri Sembilan,1/1/2020,male,624000
+Negeri Sembilan,1/1/2021,female,579900
+Negeri Sembilan,1/1/2021,male,624200
+Negeri Sembilan,1/1/2022,female,582700
+Negeri Sembilan,1/1/2022,male,625100
+Negeri Sembilan,1/1/2023,female,589500
+Negeri Sembilan,1/1/2023,male,635400
+Negeri Sembilan,1/1/2024,female,595300
+Negeri Sembilan,1/1/2024,male,644100
+Pahang,1/1/2015,female,749700
+Pahang,1/1/2015,male,858200
+Pahang,1/1/2016,female,759400
+Pahang,1/1/2016,male,867300
+Pahang,1/1/2017,female,768900
+Pahang,1/1/2017,male,878200
+Pahang,1/1/2018,female,778000
+Pahang,1/1/2018,male,886800
+Pahang,1/1/2019,female,784600
+Pahang,1/1/2019,male,886900
+Pahang,1/1/2020,female,747100
+Pahang,1/1/2020,male,844200
+Pahang,1/1/2021,female,754400
+Pahang,1/1/2021,male,847000
+Pahang,1/1/2022,female,761200
+Pahang,1/1/2022,male,853000
+Pahang,1/1/2023,female,770300
+Pahang,1/1/2023,male,872900
+Pahang,1/1/2024,female,778100
+Pahang,1/1/2024,male,889700
+Perak,1/1/2015,female,1217600
+Perak,1/1/2015,male,1249300
+Perak,1/1/2016,female,1225200
+Perak,1/1/2016,male,1257000
+Perak,1/1/2017,female,1230300
+Perak,1/1/2017,male,1262900
+Perak,1/1/2018,female,1236700
+Perak,1/1/2018,male,1266700
+Perak,1/1/2019,female,1240600
+Perak,1/1/2019,male,1268200
+Perak,1/1/2020,female,1195800
+Perak,1/1/2020,male,1300200
+Perak,1/1/2021,female,1206800
+Perak,1/1/2021,male,1309000
+Perak,1/1/2022,female,1209900
+Perak,1/1/2022,male,1304600
+Perak,1/1/2023,female,1217900
+Perak,1/1/2023,male,1323400
+Perak,1/1/2024,female,1225700
+Perak,1/1/2024,male,1343700
+Perlis,1/1/2015,female,124700
+Perlis,1/1/2015,male,123800
+Perlis,1/1/2016,female,125700
+Perlis,1/1/2016,male,125300
+Perlis,1/1/2017,female,126300
+Perlis,1/1/2017,male,125700
+Perlis,1/1/2018,female,127200
+Perlis,1/1/2018,male,126300
+Perlis,1/1/2019,female,127600
+Perlis,1/1/2019,male,126500
+Perlis,1/1/2020,female,142500
+Perlis,1/1/2020,male,142300
+Perlis,1/1/2021,female,144000
+Perlis,1/1/2021,male,143600
+Perlis,1/1/2022,female,145200
+Perlis,1/1/2022,male,144600
+Perlis,1/1/2023,female,146900
+Perlis,1/1/2023,male,146200
+Perlis,1/1/2024,female,148800
+Perlis,1/1/2024,male,147900
+Pulau Pinang,1/1/2015,female,842900
+Pulau Pinang,1/1/2015,male,855200
+Pulau Pinang,1/1/2016,female,853000
+Pulau Pinang,1/1/2016,male,864600
+Pulau Pinang,1/1/2017,female,867000
+Pulau Pinang,1/1/2017,male,877100
+Pulau Pinang,1/1/2018,female,876300
+Pulau Pinang,1/1/2018,male,886500
+Pulau Pinang,1/1/2019,female,879700
+Pulau Pinang,1/1/2019,male,889100
+Pulau Pinang,1/1/2020,female,847900
+Pulau Pinang,1/1/2020,male,892600
+Pulau Pinang,1/1/2021,female,848600
+Pulau Pinang,1/1/2021,male,891400
+Pulau Pinang,1/1/2022,female,849900
+Pulau Pinang,1/1/2022,male,891000
+Pulau Pinang,1/1/2023,female,864200
+Pulau Pinang,1/1/2023,male,908400
+Pulau Pinang,1/1/2024,female,876700
+Pulau Pinang,1/1/2024,male,923800
+Sabah,1/1/2015,female,1778200
+Sabah,1/1/2015,male,1942300
+Sabah,1/1/2016,female,1816200
+Sabah,1/1/2016,male,1986600
+Sabah,1/1/2017,female,1842100
+Sabah,1/1/2017,male,2013800
+Sabah,1/1/2018,female,1862800
+Sabah,1/1/2018,male,2035600
+Sabah,1/1/2019,female,1867200
+Sabah,1/1/2019,male,2037200
+Sabah,1/1/2020,female,1639000
+Sabah,1/1/2020,male,1779800
+Sabah,1/1/2021,female,1633100
+Sabah,1/1/2021,male,1779500
+Sabah,1/1/2022,female,1635900
+Sabah,1/1/2022,male,1779100
+Sabah,1/1/2023,female,1719900
+Sabah,1/1/2023,male,1876900
+Sabah,1/1/2024,female,1786900
+Sabah,1/1/2024,male,1955000
+Sarawak,1/1/2015,female,1294100
+Sarawak,1/1/2015,male,1407400
+Sarawak,1/1/2016,female,1310800
+Sarawak,1/1/2016,male,1427900
+Sarawak,1/1/2017,female,1324000
+Sarawak,1/1/2017,male,1442300
+Sarawak,1/1/2018,female,1336500
+Sarawak,1/1/2018,male,1455100
+Sarawak,1/1/2019,female,1345700
+Sarawak,1/1/2019,male,1460300
+Sarawak,1/1/2020,female,1184100
+Sarawak,1/1/2020,male,1269600
+Sarawak,1/1/2021,female,1192000
+Sarawak,1/1/2021,male,1273600
+Sarawak,1/1/2022,female,1197400
+Sarawak,1/1/2022,male,1276100
+Sarawak,1/1/2023,female,1210400
+Sarawak,1/1/2023,male,1292000
+Sarawak,1/1/2024,female,1218300
+Sarawak,1/1/2024,male,1299200
+Selangor,1/1/2015,female,2965500
+Selangor,1/1/2015,male,3212500
+Selangor,1/1/2016,female,3019900
+Selangor,1/1/2016,male,3271600
+Selangor,1/1/2017,female,3064500
+Selangor,1/1/2017,male,3316200
+Selangor,1/1/2018,female,3110100
+Selangor,1/1/2018,male,3365000
+Selangor,1/1/2019,female,3131000
+Selangor,1/1/2019,male,3375100
+Selangor,1/1/2020,female,3283700
+Selangor,1/1/2020,male,3710800
+Selangor,1/1/2021,female,3304700
+Selangor,1/1/2021,male,3710000
+Selangor,1/1/2022,female,3326000
+Selangor,1/1/2022,male,3724300
+Selangor,1/1/2023,female,3379000
+Selangor,1/1/2023,male,3830700
+Selangor,1/1/2024,female,3429200
+Selangor,1/1/2024,male,3933500
+Terengganu,1/1/2015,female,569400
+Terengganu,1/1/2015,male,591600
+Terengganu,1/1/2016,female,580000
+Terengganu,1/1/2016,male,603400
+Terengganu,1/1/2017,female,591600
+Terengganu,1/1/2017,male,616400
+Terengganu,1/1/2018,female,602200
+Terengganu,1/1/2018,male,626100
+Terengganu,1/1/2019,female,611300
+Terengganu,1/1/2019,male,633200
+Terengganu,1/1/2020,female,561600
+Terengganu,1/1/2020,male,587900
+Terengganu,1/1/2021,female,571500
+Terengganu,1/1/2021,male,599100
+Terengganu,1/1/2022,female,579500
+Terengganu,1/1/2022,male,607100
+Terengganu,1/1/2023,female,589500
+Terengganu,1/1/2023,male,620600
+Terengganu,1/1/2024,female,598800
+Terengganu,1/1/2024,male,632800
+Kuala Lumpur,1/1/2015,female,867400
+Kuala Lumpur,1/1/2015,male,913000
+Kuala Lumpur,1/1/2016,female,871400
+Kuala Lumpur,1/1/2016,male,918300
+Kuala Lumpur,1/1/2017,female,873800
+Kuala Lumpur,1/1/2017,male,919400
+Kuala Lumpur,1/1/2018,female,870700
+Kuala Lumpur,1/1/2018,male,919400
+Kuala Lumpur,1/1/2019,female,867300
+Kuala Lumpur,1/1/2019,male,915200
+Kuala Lumpur,1/1/2020,female,923200
+Kuala Lumpur,1/1/2020,male,1058900
+Kuala Lumpur,1/1/2021,female,918800
+Kuala Lumpur,1/1/2021,male,1045200
+Kuala Lumpur,1/1/2022,female,920300
+Kuala Lumpur,1/1/2022,male,1040800
+Kuala Lumpur,1/1/2023,female,933600
+Kuala Lumpur,1/1/2023,male,1072100
+Kuala Lumpur,1/1/2024,female,950600
+Kuala Lumpur,1/1/2024,male,1116900
+Labuan,1/1/2015,female,47000
+Labuan,1/1/2015,male,48100
+Labuan,1/1/2016,female,47900
+Labuan,1/1/2016,male,48900
+Labuan,1/1/2017,female,48300
+Labuan,1/1/2017,male,49200
+Labuan,1/1/2018,female,49100
+Labuan,1/1/2018,male,49900
+Labuan,1/1/2019,female,49300
+Labuan,1/1/2019,male,50000
+Labuan,1/1/2020,female,46200
+Labuan,1/1/2020,male,48900
+Labuan,1/1/2021,female,46600
+Labuan,1/1/2021,male,49400
+Labuan,1/1/2022,female,47000
+Labuan,1/1/2022,male,49800
+Labuan,1/1/2023,female,48200
+Labuan,1/1/2023,male,50800
+Labuan,1/1/2024,female,49000
+Labuan,1/1/2024,male,51800
